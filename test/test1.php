@@ -7,7 +7,7 @@
  * @desc 测试生成文档2
  * 说明的内容
  * 说明内容第二行
- * @param string $id required 说明j GOod
+ * @param string $id required 说明
  * @param string $code 说明code
  * @param string desc 说明desc
  * @param @mystring descm 说明desc自定

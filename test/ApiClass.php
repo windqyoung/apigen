@@ -16,29 +16,25 @@ class ApiClass
      * @desc 测试生成文档
      * 说明的内容 属于desc
      * 说明内容第二行 属于desc
-     * @param string $id @inquery required 说明j GOod
+     * @param string $id @inquery required 说明id
      * @param string $code @informData 说明code
      * @param string desc 说明desc
-     * @param @mystring[] descm 说明desc自定
+     * @param @mystring[] descm 说明descm
      * @errorCode 123 说明123
      *
      * @tags Tag1 Tag2, Tag3
      * @tag
      * @tags
      * @return array|PDO
-     * helo,
-     * world
+     * 说明return
+     * 说明return2
      * @http 200
-     * @return myReturn
-     * good
-     * body
-     * @http 301
      * @data
      * 这里面是说明data如何如何
      * 说明第二句
      * string account  required 说明1
-     * string vcode  vcode说明2
-     * @arraykeytype arraykey  required 说明
+     * string vcode  vcode 说明2
+     * @arraykeytype arraykey  required 说明3
      * 第三句
      *
      * @arraykeytype
@@ -51,7 +47,7 @@ class ApiClass
      *
      *
      * @example
-     * helo, world
+     * helo, world 示例
      * @example 例子1
      *
      * {"json": "返回示例",
@@ -66,6 +62,10 @@ class ApiClass
      * @example
      * 例子333
      *
+     * @return myReturn
+     * good
+     * body
+     * @http 301
      * @end
      *
      * nocheck
