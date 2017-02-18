@@ -768,7 +768,7 @@ class ApiDocGen
 
         header('content-type: application/json');
         header('access-control-allow-origin: *');
-        echo json_encode($sw);
+        echo json_encode($sw, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     }
 
 
