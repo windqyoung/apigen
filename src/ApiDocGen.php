@@ -599,13 +599,16 @@ class ApiDocGen
         if (isset($defi['example'])) {
             $exp = [];
             foreach ($defi['example'] as $k => $ex) {
-                $exp['示例 ' . $k] = $this->normalExample($ex);
+                $exp[] = [
+                    '说明' => is_int($k) ? "例子 $k" : $k,
+                    '内容' => $this->normalExample($ex),
+                ];
             }
             $ret['example'] = $exp;
         }
 
         if (isset($defi['errorCode'])) {
-            $ret['example']['错误码说明'] = $defi['errorCode'];
+            $ret['example'][] = ['说明' => '错误码说明', '内容' => $defi['errorCode']];
         }
 
         return $ret;
