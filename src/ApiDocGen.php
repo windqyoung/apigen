@@ -687,10 +687,10 @@ class ApiDocGen
             $respTypes[] = ['name' => $defiName, 'defi' => $one];
             $op['responses'][$http] = $resp;
         }
-        $sw['paths'][$uri][$method] = $op;
-
         $op['x-errorCode'] = $doc['errorCode'];
         $op['x-example'] = $doc['example'];
+
+        $sw['paths'][$uri][$method] = $op;
 
         foreach ($respTypes as $t) {
             $sw['definitions'][$t['name']] = $this->buildDefinitionObject($t['defi'], $doc);
