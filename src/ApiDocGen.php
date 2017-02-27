@@ -525,29 +525,29 @@ class ApiDocGen
         return $param;
     }
 
+    private $nmTypes = [
+        'int' => ['type' => 'integer', 'format' => 'int32', ],
+        'integer' => ['type' => 'integer', 'format' => 'int32', ],
+        'long' => ['type' => 'integer', 'format' => 'int64', ],
+        'float' => ['type' => 'number', 'format' => 'float', ],
+        'double' => ['type' => 'number', 'format' => 'double', ],
+        'string' => ['type' => 'string', 'format' => 'byte', ],
+        'binary' => ['type' => 'string', 'format' => 'binary', ],
+        'bool' => ['type' => 'boolean', 'format' => 'date', ],
+        'boolean' => ['type' => 'boolean', 'format' => 'date', ],
+        'dateTime' => ['type' => 'string', 'format' => 'date', ],
+        'datetime' => ['type' => 'string', 'format' => 'date', ],
+        'date' => ['type' => 'string', 'format' => 'date', ],
+        'password' => ['type' => 'string', 'format' => 'password', ],
+    ];
+
     private function normalType($type)
     {
-        $nmTypes = [
-            'int' => ['type' => 'integer', 'format' => 'int32', ],
-            'integer' => ['type' => 'integer', 'format' => 'int32', ],
-            'long' => ['type' => 'integer', 'format' => 'int64', ],
-            'float' => ['type' => 'number', 'format' => 'float', ],
-            'double' => ['type' => 'number', 'format' => 'double', ],
-            'string' => ['type' => 'string', 'format' => 'byte', ],
-            'binary' => ['type' => 'string', 'format' => 'binary', ],
-            'bool' => ['type' => 'boolean', 'format' => 'date', ],
-            'boolean' => ['type' => 'boolean', 'format' => 'date', ],
-            'dateTime' => ['type' => 'string', 'format' => 'date', ],
-            'datetime' => ['type' => 'string', 'format' => 'date', ],
-            'date' => ['type' => 'string', 'format' => 'date', ],
-            'password' => ['type' => 'string', 'format' => 'password', ],
-        ];
-
-        if (! isset($nmTypes[$type])) {
+        if (! isset($this->nmTypes[$type])) {
             $type = 'string';
         }
 
-        return $nmTypes[$type];
+        return $this->nmTypes[$type];
     }
 
     private function returnTypeDefinitionName($rt, $doc)
