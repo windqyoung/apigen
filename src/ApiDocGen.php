@@ -296,7 +296,7 @@ class ApiDocGen
         $exp = implode("\n", $exampleArray);
         $json = json_decode($exp);
         if ($json) {
-            $text = json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            $text = json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         }
         else {
             $text = $exp;
