@@ -8,7 +8,7 @@ use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 
 
-class ApiDocGen
+class GenDoc
 {
 
     private $returnDefault = [

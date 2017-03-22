@@ -3,7 +3,7 @@
 
 
 使用
->$ git clone https://github.com/windqyoung/apidocgen.git
->$ cd apidocgen
+>$ git clone https://github.com/windqyoung/apigen.git
+>$ cd apigen
 >$ php -S 0.0.0.0:9088
 打开网址: http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A9088%2Fbin%2Fswagger.php%3Fd%3D..%26h%3Dlocalhost%3A9088%26b%3D%2Fbin%2Fv1.php%2F

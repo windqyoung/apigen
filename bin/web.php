@@ -1,11 +1,11 @@
 <?php
 
 
-require __DIR__ . '/../src/ApiDocGen.php';
+require __DIR__ . '/../src/GenDoc.php';
 
-use Wqy\ApiDocGen;
+use Wqy\GenDoc;
 
-$gen = new ApiDocGen();
+$gen = new GenDoc();
 
 echo '<!-- gendoc {{{ -->', "\n\n\n";
 
